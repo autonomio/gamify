@@ -56,7 +56,7 @@ Gamify works on **Linux, Mac OSX**, and **Windows**.
 
 #### Track epoch-by-epoch progress
 
-<img src="https://ibb.co/xqh5jcK" width=550px>
+<img src="https://i.ibb.co/HTsZdXC/analyze.png" width=550px>
 
 #### Analyze the results
 
@@ -64,7 +64,7 @@ Gamify works on **Linux, Mac OSX**, and **Windows**.
 
 #### Analyze the experiment log
 
-<img src="https://ibb.co/4sftB19" width=550px>
+<img src="https://i.ibb.co/mvBTQN1/experiment-log.png" width=550px>
 
 
 
