@@ -12,19 +12,6 @@
     <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
     <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
 
-    <style type="text/css">
-      
-      .ui-sparkline {
-  font-family:"Segoe UI", Arial, sans-serif;
-  font-size:12px;
-  background: rgba(255,255,255,0) !important;
-  padding:10px 5px 10px 5px;
-}
-
-
-    </style>
-
-
   </head>
   <body>
     <div class="be-wrapper">
@@ -68,7 +55,7 @@
 
                       <li class="active"><a href="overview.html">Overview</a></li>
                       <li><a href="experiment_log.html">Experiment Log</a></li>
-                      <li><a href="custom_reports.html">Custom Reports</a></li>
+                      <li><a href="live_monitoring.html">Live Monitoring</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -110,7 +97,7 @@
                         <div class="widget widget-tile card card-border-color card-border-color-warning">
                           <div class="chart sparkline" id="spark1">0,5,3,7,5,10,3,6,5,10</div>
                           <div class="data-info">
-                            <div class="desc">best <span id='best_a_label'></span></div>
+                            <div class="desc">max <span id='best_a_label'></span></div>
                             <div class="value"><span class="indicator indicator-equal mdi mdi-chevron-right"></span><span class="number" id="best_a"></span>
                             </div>
                           </div>
@@ -121,7 +108,7 @@
                         <div class="widget widget-tile card card-border-color card-border-color-warning">
                           <div class="chart sparkline" id="spark3">2,3,4,5,4,3,2,3,4,5,6,5,4,3,4,5,6,5,4,4,5</div>
                           <div class="data-info">
-                            <div class="desc">best <span id='best_b_label'></span></div>
+                            <div class="desc">max <span id='best_b_label'></span></div>
                             <div class="value"><span class="indicator indicator-positive mdi mdi-chevron-up"></span><span class="number" id="best_b"></span>
                             </div>
                           </div>
@@ -267,7 +254,7 @@
     function updateSparksB(b, label) { 
       
       b = b.map(num => Number(num))
-      best_b = Math.min.apply(Math, b)
+      best_b = Math.max.apply(Math, b)
       javascript:document.getElementById('best_b').innerHTML = best_b.toFixed(3)
       javascript:document.getElementById('mean_b').innerHTML = avg(b).toFixed(3)
       javascript:document.getElementById('best_b_label').innerHTML = label
