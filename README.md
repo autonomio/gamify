@@ -54,15 +54,38 @@ Gamify works on **Linux, Mac OSX**, and **Windows**.
 
 ### 📈 Examples
 
+#### Track epoch-by-epoch progress
 
-<img src=https://i.ibb.co/VWd8Bhm/Screen-Shot-2019-01-06-at-11-26-32-PM.png>
+<img src="https://ibb.co/xqh5jcK" width=550px>
+
+#### Analyze the results
+
+<img src="https://i.ibb.co/88SKWSg/overview.png" width=550px>
+
+#### Analyze the experiment log
+
+<img src="https://ibb.co/4sftB19" width=550px>
+
 
 
 <hr>
 
 ### 💾 Install and Use
 
-Download the repo, 
+Download the repo, navigate to the `/gamify` folder (or add `gamify.py` to your PATH) and: 
+
+`python gamify.app /path/to/talos/experiment`
+
+Here `/path/to/talos/experiment` refers to the folder Talos creates based on `Scan(...experiment_name...)` from v0.6.2 onwards.
+
+Note, the live updating epoch-by-epoch monitor requires the use of `ExperimentLogCallback` in Talos. Which means that your input model `model.fit` would like this: 
+
+```
+out = model.fit(...
+                callbacks=[talos.utils.ExperimentLogCallback('minimal_iris', params)],
+                 ...)
+```
+<hr>
 
 ### 💬 How to get Support
 
