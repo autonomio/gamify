@@ -19,7 +19,7 @@
   <a href="#Support">Support</a> •
   <a href="https://github.com/autonomio/talos/issues">Issues</a> •
   <a href="#License">License</a> •
-  <a href="https://github.com/autonomio/talos/archive/master.zip">Download</a>
+  <a href="https://github.com/autonomio/gamify/archive/master.zip">Download</a>
 </p>
 <hr>
 <p align="center">
