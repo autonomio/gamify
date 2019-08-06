@@ -28,34 +28,25 @@ Gamify puts the researcher back in the driver's seat in modern deep learning wor
 </p>
 
 <p align="center">
-<img src='https://i.ibb.co/3NFH646/keras-model-to-talos.gif' width=550px>
+<img src='https://i.ibb.co/88SKWSg/overview.png' width=550px>
 </p>
 
-### Talos
+### Gamify
 
 TL;DR
 
 Gamify radically changes the hyperparameter optimization workflow by giving the researcher powerful tools to analyze, control, and optimize the process during the experiment. Gamify is an add-on to leading hyperparameter scanning solution [Talos](http://github.com/autonomio/talos). Talos exposes Keras functionality entirely and there is no new syntax or templates to learn. 
 
-Talos radically transforms ordinary Keras workflows without taking away any of Keras.
-
-- works with ANY Keras model
-- takes minutes to implement
-- no new syntax to learn
-- adds zero new overhead to your workflow
-
-Talos is made for data scientists and data engineers that want to remain in **complete control of their Keras models**, but are tired of mindless parameter hopping and confusing optimization solutions that add complexity instead of reducing it. Within minutes, without learning any new syntax, Talos allows you to configure, perform, and evaluate hyperparameter optimization experiments that yield state-of-the-art results across a wide range of prediction tasks. Talos provides the **simplest and yet most powerful** available method for hyperparameter optimization with Keras.
-
 <hr>
 
 ### :wrench: Key Features
 
-Gamify adds a visual command center to <strong>[Talos]</strong>(http://github.com/autonomio/talos) experiments.
+Gamify adds a visual command center to [Talos](http://github.com/autonomio/talos) experiments.
 
 - Analyze experiment log
 - Visualize experiment results
 - Monitor and analyze epoch-by-epoch training performance
-- 
+- Make changes in real-time to the experiment (coming soon)
 
 Gamify works on **Linux, Mac OSX**, and **Windows**.
 
