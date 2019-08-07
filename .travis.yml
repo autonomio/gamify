@@ -1,0 +1,27 @@
+dist: trusty
+sudo: required
+before_install: 
+language: python
+notifications:
+  email:
+    recipients:
+    - mailme@mikkokotila.com
+    on_success: never
+    on_failure: never
+python:
+- '3.5'
+- '3.6'
+install:
+- pip install -r requirements.txt
+- python setup.py install
+- pip install coveralls
+script:
+- coverage run --source=gamify ./test_script.py
+after_success: coveralls
+deploy:
+  provider: pypi
+  user: mikkokotila
+  password:
+    secure: f0Nebchoh7J+m6+ziFf9DEvS74ldYdtKI26iwvEYiNCOKRYuOnL95nE0S6QTP4MisFKMmUUe340ykF0709azKJRfgDRYAI6FBwg0memFtzFU9NJJ/fbaxrOsP4XxmhVFXtQr0qej7WA5EXvDaoxTZhjqf/xoRHyfY2omAmlQ/wDBni/9KpqBLT6sbVAwlrwK15t+FTTf2niuu1SFdVtjSCHGtIi6jcATMRgmwhWlZ6dvLq/H8OdSPygu9L1irM91UOhZjmqSwIJtuj954TKzqVhuX91AomIlGJcfZXWma9mncdDiFHzfCK7F5RZhW7kc5PWKvDGJQf8P87rIdLl6SY/DBoxXKj0yjwJ00K8SbeKmRs2R6nUuqQIi4juhXWo6BpqqOrvt3SXk6Yvc++ev/gxlRcPHF2/BT/jnF1PGQtzsdco9vW24jUBo99byTuy8x9mBmITv59vD0/QRaAHogVMd6BdgQR5499B7brhshupI1bKkRTZTJrNkDFGMev8X5V/rEQ8FfBK70ANfxuTSeSo7tXcVNQtDLvqGAQx2yAwAFHCrNvjsBM/epK5d+EQny1Xyp2RsKG7t0V+qdF6Kq7V2V8yFHrdOxJbR/hAp/4iTMfzklKn6pMaZBMYZxA5ICL1OzkUJ+VSb7CXjRXD6ras6/UeT7F5GWaqm1yH6Cvo=
+  on:
+    branch: production

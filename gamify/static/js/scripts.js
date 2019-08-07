@@ -14,7 +14,18 @@ function avg(a) {
 
 // data loader
 function loadData(experiment_id) {
-  var filename = '/data/' + experiment_id + '.csv'
+
+  var origin = document.URL.split('/')
+  var filename = '/data/' + experiment_id
+
+  if (origin.slice(-1) == 'live_monitoring') { 
+    filename += '.log'
+
+  } else {
+    filename += '.csv'
+
+  }
+
   d3.csv(filename).then(generateColumnSelectors);
 }
 
@@ -23,10 +34,9 @@ function experiment_dd(sel) {
   sessionStorage.setItem('experiment_id', String(sel.value))
 
   var origin = document.URL.split('/')
-  console.log(origin.slice(-1))
 
+  // coming from experiment log so load data differently 
   if (origin.slice(-1) == 'experiment_log') {
-    console.log('/data/' + sel.value + '.csv')
   	csvImport('/data/' + sel.value + '.csv')
 
   } else {

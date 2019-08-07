@@ -295,7 +295,6 @@ function updateSparksB(b, label) {
           
        var filename = '/data/' + sessionStorage.getItem('experiment_id') + '.log'
         d3.csv(filename).then(generateData);
-        console.log(filename)
          
          }, 1000)
 
