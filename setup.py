@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2019 Mikko Kotila
 
-DESCRIPTION = "Talos Hyperparameter Tuning for Keras"
+DESCRIPTION = "Gamified Deep Learning"
 LONG_DESCRIPTION = """\
 Gamify puts the researcher back in the driver's seat in modern deep
 learning workflow by unlocking a new era of man-machine symbiosis
@@ -17,10 +17,10 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/gamify/'
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 try:
-    from setuptools import setup
+    from setuptools import setup, find_packages
     _has_setuptools = True
 except ImportError:
     from distutils.core import setup
@@ -41,8 +41,10 @@ if __name__ == "__main__":
           url=URL,
           version=VERSION,
           download_url=DOWNLOAD_URL,
+          packages=find_packages(),
+          include_package_data=True,
+          zip_safe=False,
           install_requires=install_requires,
-          packages=['gamify'],
 
           classifiers=['Intended Audience :: Science/Research',
                        'Programming Language :: Python :: 2.7',

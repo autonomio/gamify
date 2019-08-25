@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  
+
   <a href="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png">
     <img width=150px src="https://raw.githubusercontent.com/eka-foundation/home/master/images/by-sa.png" alt="License">
   </a>
@@ -23,8 +23,8 @@
 </p>
 <hr>
 <p align="center">
-  
-Gamify puts the researcher back in the driver's seat in modern deep learning workflow by unlocking a new era of man-machine symbiosis in artificial intelligence model development. As the mission matures, developing state-of-the-art deep learning models will feel more like playing a Real-Time Strategy Game. 
+
+Gamify puts the researcher back in the driver's seat in modern deep learning workflow by unlocking a new era of man-machine symbiosis in artificial intelligence model development. As the mission matures, developing state-of-the-art deep learning models will feel more like playing a Real-Time Strategy Game.
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@ Gamify puts the researcher back in the driver's seat in modern deep learning wor
 
 TL;DR
 
-Gamify radically changes the hyperparameter optimization workflow by giving the researcher powerful tools to analyze, control, and optimize the process during the experiment. Gamify is an add-on to leading hyperparameter scanning solution [Talos](http://github.com/autonomio/talos). Talos exposes Keras functionality entirely and there is no new syntax or templates to learn. 
+Gamify radically changes the hyperparameter optimization workflow by giving the researcher powerful tools to analyze, control, and optimize the process during the experiment. Gamify is an add-on to leading hyperparameter scanning solution [Talos](http://github.com/autonomio/talos). Talos exposes Keras functionality entirely and there is no new syntax or templates to learn.
 
 <hr>
 
@@ -72,13 +72,21 @@ Gamify works on **Linux, Mac OSX**, and **Windows**.
 
 ### 💾 Install and Use
 
-Download the repo, navigate to the `/gamify` folder (or add `gamify.py` to your PATH) and: 
+Install:
 
-`python gamify.app /path/to/talos/experiment`
+`pip install gamify`
+
+Or download the repo.
+
+At this point you might want to add `gamify` to your `PATH`, after which you can:
+
+`python gamify /path/to/talos/experiment`
+
+Otherwise replace `python gamify` with `python /path/to/gamify`
 
 Here `/path/to/talos/experiment` refers to the folder Talos creates based on `Scan(...experiment_name...)` from v0.6.2 onwards.
 
-Note, the live updating epoch-by-epoch monitor requires the use of `ExperimentLogCallback` in Talos. Which means that your input model `model.fit` would like this: 
+Note, the live updating epoch-by-epoch monitor requires the use of `ExperimentLogCallback` in Talos. Which means that your input model `model.fit` would like this:
 
 ```
 out = model.fit(...
