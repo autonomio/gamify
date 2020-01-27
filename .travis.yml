@@ -16,7 +16,7 @@ install:
 - python setup.py install
 - pip install coveralls
 script:
-- coverage run --source=gamify ./test_script.py
+- coverage run --source=gamify ./test-ci.py
 after_success: coveralls
 deploy:
   provider: pypi

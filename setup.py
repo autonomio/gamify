@@ -17,7 +17,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/gamify/'
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 
 try:
     from setuptools import setup, find_packages
@@ -25,7 +25,8 @@ try:
 except ImportError:
     from distutils.core import setup
 
-install_requires = ['werkzeug==0.15.4', 'flask']
+install_requires = ['werkzeug==0.15.4',
+                    'flask']
 
 
 if __name__ == "__main__":
@@ -41,7 +42,8 @@ if __name__ == "__main__":
           url=URL,
           version=VERSION,
           download_url=DOWNLOAD_URL,
-          packages=find_packages(),
+          packages=['gamify', 'gamify.static', 'gamify.templates'],
+          package_data={'gamify.static': ['*'], 'gamify.templates': ['*']},
           include_package_data=True,
           zip_safe=False,
           install_requires=install_requires,

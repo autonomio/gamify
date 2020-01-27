@@ -1,0 +1,2 @@
+include gamify/templates/
+include gamify/static/
