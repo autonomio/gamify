@@ -25,7 +25,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-install_requires = ['werkzeug==0.15.4',
+install_requires = ['werkzeug==2.2.3',
                     'flask']
 
 
